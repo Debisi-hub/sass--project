@@ -1,0 +1,49 @@
+$Redish:#B1272C;
+$bluish: #2F2E7C;
+$link-color: #495057;
+$paragraph-color:#4E4D4D;
+$footer-heading:#6A6A6A;
+$effective-guide-background:#FEF7E9;
+$footer-background:#F6F9FF;
+$icon-color:#33A354;
+
+
+@mixin transition-ease {
+ transition:all 0.5s ease-in-out;
+}
+@mixin flex-center{
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction:column;
+}
+@mixin small-model {
+  @media screen and (max-width:460px) {
+    @content;
+  }
+}
+@mixin media-smallphone {
+  @media screen and (max-width:380px) {
+    @content;
+  }
+} 
+@mixin small-footer{
+  @media screen and (max-width:1023px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width:768px) {
+    @content;
+  }
+}
+@mixin media-lg{
+  @media screen and (min-width:1024px) {
+    @content;
+  }
+}
+@mixin media-xl{
+  @media screen and (min-width:1300px) {
+    @content;
+  }
+} 

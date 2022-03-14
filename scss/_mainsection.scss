@@ -1,0 +1,57 @@
+.guide-section{
+ .guide{
+  padding:0 1rem;
+  padding-right:2rem;
+  padding-top:1.5rem;
+ h1{
+  font-size:20px;
+ }
+ .btn{
+  margin-top:1rem;
+ }
+
+ .guide-info{
+ @include flex-center;
+  p:nth-of-type(1){
+   color:$link-color;
+   font-weight:600;
+  }
+ } 
+ 
+}
+.effective__guide{
+ padding:1rem 1.5rem;
+ padding-bottom:0;
+}
+.effective__side{
+ @include flex-center;
+ flex-direction:column;
+ &__img img{
+  width:250px;
+  height:300px;
+ }
+}
+ .guide-sub{
+  @include flex-center;
+  flex-direction:column;
+  h1{
+   text-align:center;
+   font-size:20px;
+ }
+ p{
+  font-size:18px;
+ }
+}
+.effective-guide-right{
+ h1{
+  text-align:center;
+  font-size:20px;
+ }
+ p{
+  font-size:18px;
+ }
+ .btn{
+  margin-top:1rem;
+ }
+}
+}

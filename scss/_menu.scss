@@ -1,0 +1,121 @@
+
+.menu-btn{
+ position:fixed;
+ z-index:1;
+ right:1rem;
+ top:1rem;
+ margin-right:.5rem;
+ height:20px;
+ width:28px;
+ cursor:pointer;
+ @include transition-ease;
+
+  &__burger{
+    position:absolute;
+    background:$bluish;
+    right:0;
+    top:0.5rem;
+    width:28px;
+    height:3px;
+    @include transition-ease;
+
+    
+      &::before{
+       content:'';
+       position:absolute;
+       top:-8px;
+       width:28px;
+       height:3px;
+       background: $bluish;
+       @include transition-ease;
+      }
+      
+      &::after{
+       content:'';
+       position:absolute;
+       top:8px;
+       width:28px;
+       height:3px;
+       background: $bluish;
+       @include transition-ease;
+      }
+      &.open{
+       transform:rotate(720deg);
+       background:transparent;
+       
+       &::before{
+        transform:rotate(45deg) translate(5px, 8px)
+       }
+       &::after{
+        width:28px;
+        transform:rotate(-45deg) translate(3px, -7px);
+       }
+      }
+   }
+}
+.nav{
+ position:fixed;
+ top:0;
+ left:0;
+ width:100vw;
+ // opacity:0.5;
+ visibility:hidden;
+
+ &.open{
+  visibility:visible;
+ }
+ .menu-nav{
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  overflow:hidden;
+  list-style: none;
+  background:$Redish;
+  // opacity:0.6;
+  padding-right:1rem;
+  transform:translateY(-100%);
+  @include transition-ease;
+  .login{
+    color:$bluish;
+   }
+
+  &.open{
+   transform: translateY(0);
+  }
+  &__items{
+   transform: translateX(100vw);
+   @include transition-ease;
+   padding:.8rem 0;
+   
+   
+
+   &.open{
+    transform: translateX(0);
+   }
+  }
+  
+  &__link{
+   display:inline;
+   font-size:1rem;
+   padding:2rem 0;
+   font-weight:300;
+   color:$link-color;
+   @include transition-ease;
+   
+   &:hover{
+    color:$icon-color;
+   }
+   
+  }
+ }
+}
+@for $i from 1 through 9 {
+ .menu-nav__items:nth-child(#{$i}){
+  transition-delay:($i * 0.1s) + 0.10s;
+ }
+}
+.login{
+    color:$bluish;
+   }
